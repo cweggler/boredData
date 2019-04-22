@@ -16,6 +16,9 @@
 		461926C5226D4B07009D48F9 /* BoredDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926C4226D4B07009D48F9 /* BoredDataTests.swift */; };
 		461926D0226D4B07009D48F9 /* BoredDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926CF226D4B07009D48F9 /* BoredDataUITests.swift */; };
 		461926DF226D6ED3009D48F9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926DE226D6ED3009D48F9 /* Activity.swift */; };
+		461926E2226DE271009D48F9 /* ActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E1226DE271009D48F9 /* ActivityDelegate.swift */; };
+		461926E5226DE340009D48F9 /* ActivityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E4226DE340009D48F9 /* ActivityError.swift */; };
+		461926E7226DE54F009D48F9 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E6226DE54F009D48F9 /* ActivityService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		461926CF226D4B07009D48F9 /* BoredDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredDataUITests.swift; sourceTree = "<group>"; };
 		461926D1226D4B07009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461926DE226D6ED3009D48F9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		461926E1226DE271009D48F9 /* ActivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDelegate.swift; sourceTree = "<group>"; };
+		461926E4226DE340009D48F9 /* ActivityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityError.swift; sourceTree = "<group>"; };
+		461926E6226DE54F009D48F9 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		461926AB226D4AFB009D48F9 /* BoredData */ = {
 			isa = PBXGroup;
 			children = (
+				461926E3226DE325009D48F9 /* View */,
+				461926E0226D70A9009D48F9 /* Service */,
 				461926DD226D6E9A009D48F9 /* Model */,
 				461926AC226D4AFB009D48F9 /* AppDelegate.swift */,
 				461926AE226D4AFB009D48F9 /* ViewController.swift */,
@@ -137,6 +145,23 @@
 				461926DE226D6ED3009D48F9 /* Activity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		461926E0226D70A9009D48F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				461926E1226DE271009D48F9 /* ActivityDelegate.swift */,
+				461926E6226DE54F009D48F9 /* ActivityService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		461926E3226DE325009D48F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				461926E4226DE340009D48F9 /* ActivityError.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461926E7226DE54F009D48F9 /* ActivityService.swift in Sources */,
 				461926B5226D4AFB009D48F9 /* BoredData.xcdatamodeld in Sources */,
+				461926E5226DE340009D48F9 /* ActivityError.swift in Sources */,
 				461926AF226D4AFB009D48F9 /* ViewController.swift in Sources */,
 				461926DF226D6ED3009D48F9 /* Activity.swift in Sources */,
 				461926AD226D4AFB009D48F9 /* AppDelegate.swift in Sources */,
+				461926E2226DE271009D48F9 /* ActivityDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
