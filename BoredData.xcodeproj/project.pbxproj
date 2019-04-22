@@ -15,6 +15,7 @@
 		461926BA226D4B06009D48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461926B8226D4B06009D48F9 /* LaunchScreen.storyboard */; };
 		461926C5226D4B07009D48F9 /* BoredDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926C4226D4B07009D48F9 /* BoredDataTests.swift */; };
 		461926D0226D4B07009D48F9 /* BoredDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926CF226D4B07009D48F9 /* BoredDataUITests.swift */; };
+		461926DF226D6ED3009D48F9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926DE226D6ED3009D48F9 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		461926CB226D4B07009D48F9 /* BoredDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		461926CF226D4B07009D48F9 /* BoredDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredDataUITests.swift; sourceTree = "<group>"; };
 		461926D1226D4B07009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461926DE226D6ED3009D48F9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		461926AB226D4AFB009D48F9 /* BoredData */ = {
 			isa = PBXGroup;
 			children = (
+				461926DD226D6E9A009D48F9 /* Model */,
 				461926AC226D4AFB009D48F9 /* AppDelegate.swift */,
 				461926AE226D4AFB009D48F9 /* ViewController.swift */,
 				461926B0226D4AFB009D48F9 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				461926D1226D4B07009D48F9 /* Info.plist */,
 			);
 			path = BoredDataUITests;
+			sourceTree = "<group>";
+		};
+		461926DD226D6E9A009D48F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				461926DE226D6ED3009D48F9 /* Activity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				461926B5226D4AFB009D48F9 /* BoredData.xcdatamodeld in Sources */,
 				461926AF226D4AFB009D48F9 /* ViewController.swift in Sources */,
+				461926DF226D6ED3009D48F9 /* Activity.swift in Sources */,
 				461926AD226D4AFB009D48F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
