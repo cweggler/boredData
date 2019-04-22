@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		461926AD226D4AFB009D48F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926AC226D4AFB009D48F9 /* AppDelegate.swift */; };
-		461926AF226D4AFB009D48F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926AE226D4AFB009D48F9 /* ViewController.swift */; };
+		461926AF226D4AFB009D48F9 /* BoredActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926AE226D4AFB009D48F9 /* BoredActivityViewController.swift */; };
 		461926B2226D4AFB009D48F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461926B0226D4AFB009D48F9 /* Main.storyboard */; };
 		461926B5226D4AFB009D48F9 /* BoredData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 461926B3226D4AFB009D48F9 /* BoredData.xcdatamodeld */; };
 		461926B7226D4B06009D48F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461926B6226D4B06009D48F9 /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		461926A9226D4AFB009D48F9 /* BoredData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoredData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461926AC226D4AFB009D48F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		461926AE226D4AFB009D48F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		461926AE226D4AFB009D48F9 /* BoredActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredActivityViewController.swift; sourceTree = "<group>"; };
 		461926B1226D4AFB009D48F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		461926B4226D4AFB009D48F9 /* BoredData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoredData.xcdatamodel; sourceTree = "<group>"; };
 		461926B6226D4B06009D48F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,11 +107,11 @@
 		461926AB226D4AFB009D48F9 /* BoredData */ = {
 			isa = PBXGroup;
 			children = (
+				461926E8226DF1EB009D48F9 /* Controller */,
 				461926E3226DE325009D48F9 /* View */,
 				461926E0226D70A9009D48F9 /* Service */,
 				461926DD226D6E9A009D48F9 /* Model */,
 				461926AC226D4AFB009D48F9 /* AppDelegate.swift */,
-				461926AE226D4AFB009D48F9 /* ViewController.swift */,
 				461926B0226D4AFB009D48F9 /* Main.storyboard */,
 				461926B6226D4B06009D48F9 /* Assets.xcassets */,
 				461926B8226D4B06009D48F9 /* LaunchScreen.storyboard */,
@@ -162,6 +162,14 @@
 				461926E4226DE340009D48F9 /* ActivityError.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		461926E8226DF1EB009D48F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				461926AE226D4AFB009D48F9 /* BoredActivityViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +306,7 @@
 				461926E7226DE54F009D48F9 /* ActivityService.swift in Sources */,
 				461926B5226D4AFB009D48F9 /* BoredData.xcdatamodeld in Sources */,
 				461926E5226DE340009D48F9 /* ActivityError.swift in Sources */,
-				461926AF226D4AFB009D48F9 /* ViewController.swift in Sources */,
+				461926AF226D4AFB009D48F9 /* BoredActivityViewController.swift in Sources */,
 				461926DF226D6ED3009D48F9 /* Activity.swift in Sources */,
 				461926AD226D4AFB009D48F9 /* AppDelegate.swift in Sources */,
 				461926E2226DE271009D48F9 /* ActivityDelegate.swift in Sources */,
