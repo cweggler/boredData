@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ActivityDelegate {
-    func activityFetched(activity: Activity)
+    func activityFetched(activity: BoredActivity)
     func activityFetchError(because activityError: ActivityError)
 }
