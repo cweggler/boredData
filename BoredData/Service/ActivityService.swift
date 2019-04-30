@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import CoreData
 
 class ActivityService {
     
@@ -37,7 +37,7 @@ class ActivityService {
                 let decoder = JSONDecoder()
                 
                 do {
-                    let activityData = try decoder.decode(Activity.self, from: activityData)
+                    let activityData = try decoder.decode(BoredActivity.self, from: activityData)
                     delegate.activityFetched(activity: activityData)
                     
                 } catch {

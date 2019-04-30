@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class BoredActivityViewController: UIViewController, ActivityDelegate {
     
     let activityFetcher = ActivityService()
+    var managedContext: NSManagedObjectContext?
+   
     
     @IBOutlet var activityTextView: UITextView!
     
@@ -25,9 +28,9 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
         activityFetcher.fetchRandomActivity()
     }
     
-    func activityFetched(activity: Activity) {
+    func activityFetched(activity: BoredActivity) {
         DispatchQueue.main.async {
-            let activityText = "\(activity.activity)"
+            let activityText = "\(activity.activity!)"
             self.activityTextView.text = activityText
         }
     }
@@ -39,8 +42,25 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
     }
     
     @IBAction func activityListTapped(_ sender: Any) {
+        performSegue(withIdentifier: "activityList", sender: sender)
+        
+    }
+    
+    @IBAction func saveActivity(_ sender: Any) {
+    
+        // This should save an Activity to CoreData
+        // use the managedContext to save
+        
+        do { try managedContext!.save() }
+        catch { print("Error saving") }
+        performSegue(withIdentifier: "saveActivity", sender: sender)
         // this should segue to the next scene
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let tableViewController = segue.destination as! BoredActivityTableViewController
+            tableViewController.delegate = self
+    }
+    
     
     
 

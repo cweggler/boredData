@@ -16,7 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        /*
+         This merge policy means that persistent Entities "win" if there's a conflict,
+         instead of the in-memory entities.
+         */
+        let managedContext = persistentContainer.viewContext
+        managedContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
+        
+        let navController = window!.rootViewController as! UINavigationController
+        let viewControllers = navController.viewControllers // all controllers managed by the navigation controller
+        
+        for controller in viewControllers {
+            
+            if let controller = controller as? BoredActivityViewController {
+                controller.managedContext = managedContext
+            }
+            
+            if let controller = controller as? BoredActivityTableViewController {
+                controller.managedContext = managedContext
+            }
+        }
         return true
     }
 

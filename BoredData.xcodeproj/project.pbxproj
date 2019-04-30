@@ -15,10 +15,12 @@
 		461926BA226D4B06009D48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461926B8226D4B06009D48F9 /* LaunchScreen.storyboard */; };
 		461926C5226D4B07009D48F9 /* BoredDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926C4226D4B07009D48F9 /* BoredDataTests.swift */; };
 		461926D0226D4B07009D48F9 /* BoredDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926CF226D4B07009D48F9 /* BoredDataUITests.swift */; };
-		461926DF226D6ED3009D48F9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926DE226D6ED3009D48F9 /* Activity.swift */; };
 		461926E2226DE271009D48F9 /* ActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E1226DE271009D48F9 /* ActivityDelegate.swift */; };
 		461926E5226DE340009D48F9 /* ActivityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E4226DE340009D48F9 /* ActivityError.swift */; };
 		461926E7226DE54F009D48F9 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E6226DE54F009D48F9 /* ActivityService.swift */; };
+		461926EA226E86C4009D48F9 /* BoredActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926E9226E86C4009D48F9 /* BoredActivityTableViewController.swift */; };
+		46FBE9FB2277EFD400637044 /* BoredActivity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBE9F92277EFD400637044 /* BoredActivity+CoreDataClass.swift */; };
+		46FBE9FC2277EFD400637044 /* BoredActivity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBE9FA2277EFD400637044 /* BoredActivity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +55,12 @@
 		461926CB226D4B07009D48F9 /* BoredDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		461926CF226D4B07009D48F9 /* BoredDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredDataUITests.swift; sourceTree = "<group>"; };
 		461926D1226D4B07009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		461926DE226D6ED3009D48F9 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		461926E1226DE271009D48F9 /* ActivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDelegate.swift; sourceTree = "<group>"; };
 		461926E4226DE340009D48F9 /* ActivityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityError.swift; sourceTree = "<group>"; };
 		461926E6226DE54F009D48F9 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
+		461926E9226E86C4009D48F9 /* BoredActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredActivityTableViewController.swift; sourceTree = "<group>"; };
+		46FBE9F92277EFD400637044 /* BoredActivity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoredActivity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46FBE9FA2277EFD400637044 /* BoredActivity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoredActivity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		461926A0226D4AFB009D48F9 = {
 			isa = PBXGroup;
 			children = (
+				46FBE9F92277EFD400637044 /* BoredActivity+CoreDataClass.swift */,
+				46FBE9FA2277EFD400637044 /* BoredActivity+CoreDataProperties.swift */,
 				461926AB226D4AFB009D48F9 /* BoredData */,
 				461926C3226D4B07009D48F9 /* BoredDataTests */,
 				461926CE226D4B07009D48F9 /* BoredDataUITests */,
@@ -110,13 +116,12 @@
 				461926E8226DF1EB009D48F9 /* Controller */,
 				461926E3226DE325009D48F9 /* View */,
 				461926E0226D70A9009D48F9 /* Service */,
-				461926DD226D6E9A009D48F9 /* Model */,
+				461926DD226D6E9A009D48F9 /* Data */,
 				461926AC226D4AFB009D48F9 /* AppDelegate.swift */,
 				461926B0226D4AFB009D48F9 /* Main.storyboard */,
 				461926B6226D4B06009D48F9 /* Assets.xcassets */,
 				461926B8226D4B06009D48F9 /* LaunchScreen.storyboard */,
 				461926BB226D4B06009D48F9 /* Info.plist */,
-				461926B3226D4AFB009D48F9 /* BoredData.xcdatamodeld */,
 			);
 			path = BoredData;
 			sourceTree = "<group>";
@@ -139,12 +144,12 @@
 			path = BoredDataUITests;
 			sourceTree = "<group>";
 		};
-		461926DD226D6E9A009D48F9 /* Model */ = {
+		461926DD226D6E9A009D48F9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				461926DE226D6ED3009D48F9 /* Activity.swift */,
+				461926B3226D4AFB009D48F9 /* BoredData.xcdatamodeld */,
 			);
-			path = Model;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		461926E0226D70A9009D48F9 /* Service */ = {
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				461926AE226D4AFB009D48F9 /* BoredActivityViewController.swift */,
+				461926E9226E86C4009D48F9 /* BoredActivityTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				461926E7226DE54F009D48F9 /* ActivityService.swift in Sources */,
+				461926EA226E86C4009D48F9 /* BoredActivityTableViewController.swift in Sources */,
 				461926B5226D4AFB009D48F9 /* BoredData.xcdatamodeld in Sources */,
+				46FBE9FB2277EFD400637044 /* BoredActivity+CoreDataClass.swift in Sources */,
 				461926E5226DE340009D48F9 /* ActivityError.swift in Sources */,
 				461926AF226D4AFB009D48F9 /* BoredActivityViewController.swift in Sources */,
-				461926DF226D6ED3009D48F9 /* Activity.swift in Sources */,
+				46FBE9FC2277EFD400637044 /* BoredActivity+CoreDataProperties.swift in Sources */,
 				461926AD226D4AFB009D48F9 /* AppDelegate.swift in Sources */,
 				461926E2226DE271009D48F9 /* ActivityDelegate.swift in Sources */,
 			);
