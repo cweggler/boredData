@@ -25,16 +25,25 @@ public class BoredActivity: NSManagedObject, Decodable {
     }
     
     required convenience public init(from decoder: Decoder) throws {
-        let managedObjectContext = decoder.userInfo[CodingUserInfoKey.context!] as! NSManagedObjectContext
-        guard let entity = NSEntityDescription.entity(forEntityName: "BoredActivity", in: managedObjectContext) else { fatalError("No BoredActivity") }
+        // Got this from Clara J: github.com/claraj/github_core_data_ios/
         
+        // Check that the decoder has a context in the userInfo dictionary. See also extension to CodingUserInfoKey, below
+        guard let context = decoder.userInfo[CodingUserInfoKey.context!] else { fatalError("Provide a NSManagedObjectContext") }
+        guard let managedObjectContext = context as? NSManagedObjectContext else { fatalError("Provide a NSManagedObjectContext") }
+        guard let entity = NSEntityDescription.entity(forEntityName: "BoredActivity", in: managedObjectContext) else { fatalError("No UserEntity") }
+        
+        // Call standard NSManagedEntity initializer
         self.init(entity: entity, insertInto: managedObjectContext)
+        
+        // The container holds all of the JSON data
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        // decode attributes
         self.activity = try container.decodeIfPresent(String.self, forKey: .activity)
-        self.accessibility = try container.decodeIfPresent(Double.self, forKey: .accessibility)!
+        self.accessibility = try container.decodeIfPresent(Double.self, forKey: .accessibility) ?? 0.0
         self.type = try container.decodeIfPresent(String.self, forKey: .type)
-        self.participants = try container.decodeIfPresent(Int16.self, forKey: .participants)!
-        self.price = try container.decodeIfPresent(Double.self, forKey: .price)!
+        self.participants = try container.decodeIfPresent(Int16.self, forKey: .participants) ?? 0
+        self.price = try container.decodeIfPresent(Double.self, forKey: .price) ?? 0.0
     }
 }
     

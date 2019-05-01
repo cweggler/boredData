@@ -22,10 +22,10 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
         super.viewDidLoad()
         
         activityFetcher.activityDelegate = self
-        activityFetcher.fetchRandomActivity()
+        activityFetcher.fetchRandomActivity(context: managedContext!)
     }
     @IBAction func newActivityTapped(_ sender: Any) {
-        activityFetcher.fetchRandomActivity()
+        activityFetcher.fetchRandomActivity(context: managedContext!)
     }
     
     func activityFetched(activity: BoredActivity) {

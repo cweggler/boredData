@@ -15,12 +15,13 @@ class ActivityService {
     
     let urlString = "https://www.boredapi.com/api/activity"
     
-    func fetchRandomActivity() {
+    func fetchRandomActivity(context: NSManagedObjectContext) {
         
         guard let delegate = activityDelegate else {
             print("Warning - no delegate set")
             return
         }
+        
         let url = URL(string: urlString)
         let config = URLSessionConfiguration.default
         config.urlCache = nil
@@ -35,6 +36,12 @@ class ActivityService {
             
             if let activityData = data {
                 let decoder = JSONDecoder()
+                
+                // Got this code from Clara at https://github.com/claraj/github_core_data_ios
+                // This adds context to the decoder's userInfo dictionary, so when the decoder
+                // decodes the JSON into a BoredActivity object, the object will be associcated
+                // with this NSManagedObjectContext.
+                decoder.userInfo[CodingUserInfoKey.context!] = context
                 
                 do {
                     let activityData = try decoder.decode(BoredActivity.self, from: activityData)
