@@ -19,16 +19,16 @@ class BoredActivityTableViewController: UITableViewController, NSFetchedResultsC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sortDescriptor = NSSortDescriptor(key: "accessibility", ascending: true)
         let activityFetch = NSFetchRequest<BoredActivity>(entityName: "BoredActivity")
-        activityFetch.sortDescriptors = [sortDescriptor]
         
-        fetchResultsController = NSFetchedResultsController(fetchRequest: activityFetch, managedObjectContext: managedContext!, sectionNameKeyPath: nil, cacheName: nil)
+        activityFetch.sortDescriptors = [ NSSortDescriptor(key: "accessibility", ascending: true) ]
         
-        fetchResultsController!.delegate = self
+        fetchResultsController = NSFetchedResultsController<BoredActivity> (fetchRequest: activityFetch, managedObjectContext: managedContext!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchResultsController?.delegate = self
         
         do {
-            try fetchResultsController!.performFetch()
+            try fetchResultsController?.performFetch()
             activityObjects = fetchResultsController!.fetchedObjects!
             
         } catch {

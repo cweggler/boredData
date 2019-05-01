@@ -58,7 +58,7 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let tableViewController = segue.destination as! BoredActivityTableViewController
-            tableViewController.delegate = self
+            tableViewController.managedContext = managedContext
     }
     
     
