@@ -42,7 +42,7 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
     }
     
     @IBAction func activityListTapped(_ sender: Any) {
-        performSegue(withIdentifier: "activityList", sender: sender)
+        //performSegue(withIdentifier: "activityList", sender: sender)
         
     }
     
@@ -53,12 +53,16 @@ class BoredActivityViewController: UIViewController, ActivityDelegate {
         
         do { try managedContext!.save() }
         catch { print("Error saving") }
-        performSegue(withIdentifier: "saveActivity", sender: sender)
+        //performSegue(withIdentifier: "saveActivity", sender: sender)
         // this should segue to the next scene
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveActivity" || segue.identifier == "activityList" {
             let tableViewController = segue.destination as! BoredActivityTableViewController
             tableViewController.managedContext = managedContext
+        }
+        
     }
     
     
